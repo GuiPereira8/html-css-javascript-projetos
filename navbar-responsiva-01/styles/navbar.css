@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Estilo geral para telas maiores */
+
+/* Reset e Estilo para toda página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-Inter: "Inter", sans-serif;
+    --font-Poppins: "Poppins", sans-serif;
+}
+
+body {
+    height: 100dvh;
+    background-image: url(../images/solar-system-3840x2400-10296.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+a {text-decoration: none;}
+ul {list-style: none;}
+button {
+    cursor: pointer; 
+    background: none;
+    border: none;
+}
+
+#abrirMenu, #fecharMenu {
+    display: none;
+}
+
+/* Estilo do Header/Navbar */
+
+header {
+    width: 100%;
+    position: fixed;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: auto;
+    padding: 10px 15px;
+}
+
+header .navbar .nav-logo {
+    font-family: var(--font-Poppins);
+    font-size: 2.7rem;
+    padding: 10px;
+    color: aliceblue;
+    font-weight: 600;
+
+    background-image: linear-gradient(130deg, #9bcbeb,#dce8ee, #151579);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .navbar .nav-menu {
+    display: flex;
+    gap: 0px 20px;
+}
+
+.navbar .nav-menu .nav-link {
+    font-family: var(--font-Poppins);
+    padding: 5px 12px;
+    border-radius: 3rem;
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    background-color: #a4a3e7d7;
+    color: #0b0c4b;
+}

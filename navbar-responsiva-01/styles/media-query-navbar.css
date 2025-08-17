@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* Estilo para telas pequenas */
+
+#abrirMenu, #fecharMenu {
+    display: block;
+    font-size: 2.2rem;
+}
+
+#abrirMenu {
+    color: aliceblue;
+}
+
+#fecharMenu {
+    position: absolute;
+    left: 220px;
+    top: 15px;
+}
+
+body.mostrar-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(5px);
+    background-color: rgb(0, 0, 0,0.2);    
+}
+
+body.mostrar-menu .navbar .nav-menu{
+    left: 0px;
+}
+
+header .navbar .nav-menu {
+    position: fixed;
+    display: block;
+    background-color: aliceblue;
+    width: 280px;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    flex-flow: column nowrap;
+    gap: 80px 0px;
+    left: -300px;
+    top: 0;
+
+    transition: left 0.4s ease;
+}
+
+.navbar .nav-menu .nav-link {
+    color: #000;
+    font-size: 1.4rem;
+    padding: 12px;
+}
+
+.navbar .nav-menu .nav-link:active {
+    text-decoration: underline;
+    background-color: #7e9db1a8;
+}
