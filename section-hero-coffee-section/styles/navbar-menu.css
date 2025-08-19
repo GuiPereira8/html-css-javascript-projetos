@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+:root {
+    --font-Inter: "Inter", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
+    --font-Poppins: "Poppins", sans-serif;
+
+    --cor-01:#F2E2CE;
+    --cor-02:#D2AD81;
+    --cor-03:#BF9169;
+    --cor-04:#A62F03;
+    --cor-05:#401201;
+}
