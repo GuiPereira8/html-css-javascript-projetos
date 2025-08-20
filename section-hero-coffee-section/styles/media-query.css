@@ -47,3 +47,41 @@ body.mostrarMenu .navbar .nav-menu{
 .navbar .nav-menu .nav-item {
     padding: 15px;
 }
+
+/* Media Query da seção hero */
+
+.section-hero .section-content {
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-content .section-detalhes {
+    max-width: 420px;
+}
+
+.section-content .section-detalhes .section-title {
+    font-size: 2.5rem;
+}
+
+.section-content .section-detalhes .section-subtitle {
+    font-size: 1.2rem;
+}
+
+.section-content .section-detalhes .section-description {
+    font-size: 1rem;
+}
+
+.section-content .section-detalhes :is(.section-subtitle, .section-description) {
+    max-width: 100%;
+}
+
+.section-content .imagem-hero {
+    max-width: 420px;
+    padding-top: 40px;
+}
+
+.section-content .section-detalhes .buttons {
+    justify-content: center;
+}

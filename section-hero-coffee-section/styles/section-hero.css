@@ -10,9 +10,6 @@
 
 body {
     height: 100dvh;
-    /* Background deve ser colocado na seção */
-    background-image: -webkit-radial-gradient(circle, #e4ccb0,#D2AD81,#BF9169);
-    background-attachment: fixed;
 }
 
 :root {
@@ -30,8 +27,84 @@ body {
 /* Configurações para todo site */
 a {text-decoration: none;}
 ul {list-style: none;}
+img {width: 100%;}
 button {
     cursor: pointer;
     background: none;
     border: none;
+}
+.section-content {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo da seção hero */
+.section-hero {
+    min-height: 100dvh;
+    background-image: -webkit-radial-gradient(circle, #e4ccb0,#D2AD81,#BF9169);
+    background-attachment: fixed;
+}
+
+.section-hero .section-content {
+    display: flex;
+    min-height: 100dvh;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.section-content .section-detalhes .section-title {
+    font-family: var(--font-Poppins);
+    color: #401201;
+    font-size: 2.8rem;
+}
+.section-content .section-detalhes .section-subtitle {
+    font-family: var(--font-Poppins);
+    max-width: 70%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.section-content .section-detalhes .section-description {
+    font-family: var(--font-Poppins);
+    max-width: 70%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 15px 5px;
+}
+.section-content .section-detalhes .buttons {
+    display: flex;
+    gap: 0px 40px;
+}
+
+.section-detalhes .buttons .button {
+    font-family: var(--font-Inter);
+    background-color: #401201;
+    border: 2px solid transparent;
+    font-weight: 600;
+    border-radius: 3rem;
+    padding: 10px 20px;
+    color: var(--cor-01);
+
+    transition: all 0.3s ease;
+}
+
+.section-detalhes .buttons .contate-nos {
+    background: none;
+    border: 2px solid black;
+    color: #401201;
+}
+
+.section-detalhes .buttons .contate-nos:hover {
+    border: 2px solid transparent;
+    background-color: #401201;
+    color: var(--cor-01);
+}
+
+.section-detalhes .buttons .peca-ja:hover {
+    background: none;
+    color: #401201;
+    border: 2px solid black;
 }

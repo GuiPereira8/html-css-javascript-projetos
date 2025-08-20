@@ -29,6 +29,7 @@ header .navbar {
     justify-content: space-between;
     align-items: center;
     padding: 10px 12px;
+    z-index: 5;
 }
 
 .navbar .nav-logo {
