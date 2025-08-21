@@ -108,3 +108,7 @@ button {
     color: #401201;
     border: 2px solid black;
 }
+
+.section-content .imagem-hero {
+    max-width: 620px;
+}
