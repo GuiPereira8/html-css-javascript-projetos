@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-Inter: "Inter", sans-serif;
+    --font-Poppins: "Poppins", sans-serif;
+    --font-Montserrat: "Montserrat", sans-serif;
+}
+
+body {
+    height: 100dvh;
+    /* background-image: linear-gradient(230deg, gainsboro, rgb(127, 127, 253)); */
+    background-image: url(../img/imagem-background01.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Estilo para toda página */
+
+a {text-decoration: none;}
+ul {list-style: none;}
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#buttonFechar, #buttonAbrir {
+    display: none;
+}
+
+
+/* Estilo da navbar */
+header {
+    width: 100%;
+    position: fixed;
+    padding: 5px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 0px 22px;
+    align-items: center;
+}
+
+.navbar .nav-logo {
+    font-size: 2.4rem;
+    font-family: var(--font-Montserrat);
+    color: black;
+    font-weight: 600;
+    padding: 2px;
+}
+
+.navbar .nav-menu .nav-link {
+    position: relative;
+    font-family: var(--font-Montserrat);
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 4px;
+}
+
+.navbar .nav-menu .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: #7fa4ba;
+
+    transition: width ease 0.4s;
+}
+
+.navbar .nav-menu .nav-link:hover::after {
+    width: 100%;
+}
+
+main {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > div > h1 {
+    font-size: 4rem;
+    font-family: var(--font-Inter);
+    color: white;
+    user-select: none;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.658);
+}
+
+
+/* From Uiverse.io by CristianMontoya98 */ 
+.btn {
+ width: 6.5em;
+ height: 2.2em;
+ margin: 0.5em;
+ background: black;
+ color: white;
+ border: none;
+ border-radius: 0.625em;
+ font-size: 20px;
+ font-weight: bold;
+ cursor: pointer;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+
+button:hover {
+ color: black;
+}
+
+button:after {
+ content: "";
+ background: white;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+
+button:hover:after {
+ transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+
+@media screen and (max-width: 996px) {
+    .navbar .nav-menu {
+        display: none;
+    }
+}
