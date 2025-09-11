@@ -17,7 +17,7 @@
 body {
     height: 100dvh;
     /* background-image: linear-gradient(230deg, gainsboro, rgb(127, 127, 253)); */
-    background-image: url(../img/imagem-background01.png);
+    background-image: url(../img/imagem-background-01.png);
     background-size: cover;
     background-position: center center;
 }
