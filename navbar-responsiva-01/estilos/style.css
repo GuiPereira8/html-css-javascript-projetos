@@ -104,10 +104,20 @@ main > div > h1 {
     font-family: var(--font-Inter);
     color: white;
     user-select: none;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.658);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.445);
 }
 
-
+main > div > p {
+    text-align: center;
+}
+.copyParagrafo {
+    color: ghostwhite;
+    font-family: var(--font-Inter);
+    transition-duration: 0.4s;
+}
+.copyParagrafo:hover {
+    color: #dbd8a4;
+}
 /* From Uiverse.io by CristianMontoya98 */ 
 .btn {
  width: 6.5em;
@@ -125,11 +135,11 @@ main > div > h1 {
  overflow: hidden;
 }
 
-button:hover {
+.btn:hover {
  color: black;
 }
 
-button:after {
+.btn:after {
  content: "";
  background: white;
  position: absolute;
@@ -142,14 +152,75 @@ button:after {
  transition: all 0.5s;
 }
 
-button:hover:after {
+.btn:hover:after {
  transform: skewX(-45deg) scale(1, 1);
  -webkit-transition: all 0.5s;
  transition: all 0.5s;
 }
 
 @media screen and (max-width: 996px) {
+    body.mostrarMenu header::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.055);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+    }
+
+    body.mostrarMenu .navbar .nav-menu {
+        left: 0;
+    }
+
     .navbar .nav-menu {
+        display: flex;
+        flex-flow: column nowrap;
+        position: fixed;
+        background-image: linear-gradient(to top , #ffffff91, rgb(225, 234, 245));
+        backdrop-filter: blur(5px);
+        padding: 80px 10px 40px 10px;
+        gap: 30px 0px;
+        top: 0px;
+        left: -300px;
+        width: 250px;
+        height: 100%;
+        z-index: 3;
+
+        transition: left 0.4s ease;
+    }
+
+    .navbar .nav-menu .nav-item {
+        padding: 5px 10px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        font-size: 1.3rem;
+        padding: 8px 12px;
+    }
+
+    #buttonFechar, #buttonAbrir {
+        display: block;
+        font-size: 2rem;
+    }
+    #buttonFechar {
+        position: absolute;
+        top: 24px;
+        left: 190px;
+    }
+    .caixaBtn {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 612px) {
+    main > div > h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
         display: none;
     }
 }
